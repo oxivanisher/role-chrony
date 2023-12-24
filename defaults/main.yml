@@ -1,0 +1,8 @@
+---
+# Internal DNS server
+ntp_servers:
+  - server 0.ch.pool.ntp.org
+  - server 1.ch.pool.ntp.org
+  - server 2.ch.pool.ntp.org
+  - server 3.ch.pool.ntp.org
+

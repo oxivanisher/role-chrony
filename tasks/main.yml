@@ -12,7 +12,7 @@
 
 - name: Configure chrony
   ansible.builtin.template:
-    src: etc/ntp.conf.jinja2
+    src: etc/chrony.conf.jinja2
     dest: /etc/chrony/chrony.conf
     owner: root
     group: root

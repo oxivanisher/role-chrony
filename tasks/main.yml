@@ -10,7 +10,7 @@
     enabled: true
   ignore_errors: "{{ ansible_check_mode }}"
 
-- name: Configure chrony
+- name: Configure newer chrony version
   ansible.builtin.template:
     src: chrony.conf.jinja2
     dest: /etc/chrony/chrony.conf
@@ -18,3 +18,14 @@
     group: root
     mode: "0644"
   notify: Restart chrony
+  when: ansible_distribution_major_version | int >= 11
+
+- name: Configure old chrony version
+  ansible.builtin.template:
+    src: chrony_old.conf.jinja2
+    dest: /etc/chrony/chrony.conf
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart chrony
+  when: ansible_distribution_major_version | int < 11

@@ -1,5 +1,4 @@
 ---
-
 - name: Install chrony
   ansible.builtin.apt:
     name: chrony
@@ -9,6 +8,7 @@
   ansible.builtin.service:
     name: chrony
     enabled: true
+  ignore_errors: "{{ ansible_check_mode }}"
 
 - name: Configure chrony
   ansible.builtin.template:

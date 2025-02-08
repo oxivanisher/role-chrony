@@ -4,7 +4,7 @@
 # pool 2.debian.pool.ntp.org iburst
 
 # Custom NTP servers configured trough ansible
-{% for server in ntp_servers %}
+{% for server in chrony_ntp_servers %}
 server {{ server }} iburst
 {% endfor %}
 

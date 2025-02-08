@@ -1,6 +1,6 @@
 ---
 # Internal DNS server
-ntp_servers:
+chrony_ntp_servers:
   - 0.ch.pool.ntp.org
   - 1.ch.pool.ntp.org
   - 2.ch.pool.ntp.org

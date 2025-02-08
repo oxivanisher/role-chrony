@@ -6,9 +6,9 @@ This role installs and configured chrony for time synchronization.
 Role Variables
 -----------
 
-| Name          | Comment                              | Default value |
-|---------------|--------------------------------------|---------------|
-| ntp_servers  | Ntp servers to be used | `0.ch.pool.ntp.org`, `1.ch.pool.ntp.org`, `2.ch.pool.ntp.org`, `3.ch.pool.ntp.org`         |
+| Name                | Comment                              | Default value |
+|---------------------|--------------------------------------|---------------|
+| chrony_ntp_servers  | Ntp servers to be used | `0.ch.pool.ntp.org`, `1.ch.pool.ntp.org`, `2.ch.pool.ntp.org`, `3.ch.pool.ntp.org`         |
 
 
 Example Playbook

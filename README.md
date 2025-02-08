@@ -1,5 +1,6 @@
 chrony
 ======
+[![Ansible Lint](https://github.com/oxivanisher/role-chrony/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/oxivanisher/role-chrony/actions/workflows/ansible-lint.yml)
 
 This role installs and configured chrony for time synchronization.
 

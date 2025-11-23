@@ -22,7 +22,7 @@
     group: root
     mode: "0644"
   notify: Restart chrony
-  when: ansible_distribution_major_version | int >= 11
+  when: ansible_facts.distribution_major_version | int >= 11
   become: true
   become_user: root
 
@@ -34,6 +34,6 @@
     group: root
     mode: "0644"
   notify: Restart chrony
-  when: ansible_distribution_major_version | int < 11
+  when: ansible_facts.distribution_major_version | int < 11
   become: true
   become_user: root
